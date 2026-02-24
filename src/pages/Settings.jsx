@@ -30,7 +30,7 @@ export default function Settings() {
 
             {/* Locations */}
             <div style={styles.section}>
-                <h2 style={styles.sectionTitle}>📍 Locations</h2>
+                <h2 style={styles.sectionTitle}>Locations</h2>
                 <div style={styles.form}>
                     <input placeholder="Name" value={newLocation.name} onChange={e => setNewLocation({...newLocation, name: e.target.value})} style={styles.input} />
                     <input placeholder="Description" value={newLocation.description} onChange={e => setNewLocation({...newLocation, description: e.target.value})} style={styles.input} />
@@ -48,7 +48,7 @@ export default function Settings() {
 
             {/* Employees */}
             <div style={styles.section}>
-                <h2 style={styles.sectionTitle}>👤 Employees</h2>
+                <h2 style={styles.sectionTitle}>Employees</h2>
                 <div style={styles.form}>
                     <input placeholder="Name" value={newEmployee.name} onChange={e => setNewEmployee({...newEmployee, name: e.target.value})} style={styles.input} />
                     <input placeholder="Employee ID" value={newEmployee.employee_id} onChange={e => setNewEmployee({...newEmployee, employee_id: e.target.value})} style={styles.input} />

@@ -2,12 +2,8 @@ import { useState, useEffect } from 'react';
 import api from '../api/axios';
 
 const ROOM_LAYOUT = [
-    { id: 1, name: 'Reception', x: 0, y: 0, w: 2, h: 1, color: '#00d4ff' },
-    { id: 2, name: 'Meeting Room A', x: 2, y: 0, w: 2, h: 1, color: '#7c3aed' },
-    { id: 3, name: 'Meeting Room B', x: 4, y: 0, w: 2, h: 1, color: '#7c3aed' },
-    { id: 4, name: 'Pantry', x: 0, y: 1, w: 1, h: 1, color: '#f59e0b' },
-    { id: 5, name: 'HR Office', x: 1, y: 1, w: 2, h: 1, color: '#10b981' },
-    { id: 6, name: 'IT Room', x: 3, y: 1, w: 3, h: 1, color: '#ec4899' },
+    { id: 1, name: 'Workshop First Floor', x: 0, y: 0, w: 3, h: 1, color: '#00d4ff' },
+    { id: 2, name: 'Meeting Room Second Floor', x: 3, y: 0, w: 3, h: 1, color: '#7c3aed' },
 ];
 
 const CELL_W = 160;

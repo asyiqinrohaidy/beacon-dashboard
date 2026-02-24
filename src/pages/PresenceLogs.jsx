@@ -61,7 +61,7 @@ export default function PresenceLogs() {
             <div style={styles.tabs}>
                 {['table', 'charts'].map(tab => (
                     <button key={tab} onClick={() => setActiveTab(tab)} style={activeTab === tab ? styles.activeTab : styles.tab}>
-                        {tab === 'table' ? '📋 Table' : '📊 Charts'}
+                        {tab === 'table' ? 'Table' : 'Charts'}
                     </button>
                 ))}
             </div>
@@ -71,7 +71,7 @@ export default function PresenceLogs() {
                     {/* Filters */}
                     <div style={styles.filters}>
                         <input
-                            placeholder="🔍 Search employee..."
+                            placeholder="Search employee..."
                             value={search}
                             onChange={e => setSearch(e.target.value)}
                             style={styles.searchInput}

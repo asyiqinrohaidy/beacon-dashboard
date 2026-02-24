@@ -1,12 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar({ onLogout, user }) {
     const location = useLocation();
 
     const links = [
         { to: '/', label: 'Live Map' },
         { to: '/floorplan', label: 'Floor Plan' },
         { to: '/logs', label: 'Presence Logs' },
+        { to: '/fingerprinting', label: 'Fingerprinting' },
         { to: '/settings', label: 'Settings' },
     ];
 
@@ -31,12 +32,16 @@ export default function Navbar() {
                     </Link>
                 ))}
             </div>
+            <div style={styles.userSection}>
+                <span style={styles.userName}>{user?.name}</span>
+                <button onClick={onLogout} style={styles.logoutBtn}>Logout</button>
+            </div>
         </nav>
     );
 }
 
 const styles = {
-    nav: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.2rem 2.5rem', backgroundColor: '#0d1424', borderBottom: '1px solid #1f2d45', position: 'sticky', top: 0, zIndex: 100, backdropFilter: 'blur(10px)' },
+    nav: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.2rem 2.5rem', backgroundColor: '#0d1424', borderBottom: '1px solid #1f2d45', position: 'sticky', top: 0, zIndex: 100 },
     logo: { display: 'flex', alignItems: 'center', gap: '0.6rem' },
     logoIcon: { fontSize: '1.5rem', color: '#00d4ff' },
     logoText: { fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: '1.1rem', letterSpacing: '0.1em', color: 'white' },
@@ -45,4 +50,7 @@ const styles = {
     link: { color: '#64748b', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500, padding: '0.5rem 1rem', borderRadius: '8px', transition: 'all 0.2s', position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px' },
     activeLink: { color: '#00d4ff', backgroundColor: 'rgba(0, 212, 255, 0.08)' },
     activeDot: { width: '4px', height: '4px', borderRadius: '50%', backgroundColor: '#00d4ff', display: 'block' },
+    userSection: { display: 'flex', alignItems: 'center', gap: '1rem' },
+    userName: { color: '#94a3b8', fontSize: '0.85rem' },
+    logoutBtn: { padding: '0.4rem 1rem', backgroundColor: 'rgba(239,68,68,0.1)', color: '#ef4444', border: '1px solid rgba(239,68,68,0.3)', borderRadius: '8px', cursor: 'pointer', fontSize: '0.85rem' },
 };
