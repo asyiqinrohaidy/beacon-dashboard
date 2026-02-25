@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import api from '../api/axios';
 
 const ROOM_LAYOUT = [
-    { id: 1, name: 'Workshop First Floor', x: 0, y: 0, w: 3, h: 1, color: '#00d4ff' },
-    { id: 2, name: 'Meeting Room Second Floor', x: 3, y: 0, w: 3, h: 1, color: '#7c3aed' },
+    { id: 1, name: 'First Floor', x: 0, y: 0, w: 3, h: 1, color: '#00d4ff' },
+    { id: 2, name: 'Second Floor', x: 3, y: 0, w: 3, h: 1, color: '#7c3aed' },
 ];
 
 const CELL_W = 160;

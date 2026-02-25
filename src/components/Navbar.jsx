@@ -15,7 +15,7 @@ export default function Navbar({ onLogout, user }) {
         <nav style={styles.nav}>
             <div style={styles.logo}>
                 <span style={styles.logoIcon}>◈</span>
-                <span style={styles.logoText}>BEACON<span style={styles.logoAccent}>TRACKER</span></span>
+                <span style={styles.logoText}>FULKRUM<span style={styles.logoAccent}>INTERACTIVE</span></span>
             </div>
             <div style={styles.links}>
                 {links.map(link => (

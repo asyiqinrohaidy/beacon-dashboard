@@ -64,6 +64,11 @@ export default function Fingerprinting() {
         }
     };
 
+    const deleteFingerprint = async (id) => {
+        await api.delete(`/fingerprint/${id}`);
+        await fetchFingerprints();
+    };
+
     return (
         <div style={styles.container}>
             <h1 style={styles.title}>Fingerprinting</h1>
@@ -88,7 +93,7 @@ export default function Fingerprinting() {
                     <div style={styles.formGroup}>
                         <label style={styles.label}>Location Name</label>
                         <input
-                            placeholder="e.g. Workshop First Floor"
+                            placeholder="e.g. First Floor"
                             value={locationName}
                             onChange={e => setLocationName(e.target.value)}
                             style={styles.input}
@@ -97,7 +102,7 @@ export default function Fingerprinting() {
 
                     <div style={styles.rssiRow}>
                         <div style={styles.formGroup}>
-                            <label style={styles.label}>Gateway 1 RSSI (Workshop)</label>
+                            <label style={styles.label}>Gateway 1 RSSI (First Floor)</label>
                             <input
                                 placeholder="-75"
                                 value={liveRssi.gateway_1_rssi}
@@ -107,7 +112,7 @@ export default function Fingerprinting() {
                             />
                         </div>
                         <div style={styles.formGroup}>
-                            <label style={styles.label}>Gateway 2 RSSI (Meeting Room)</label>
+                            <label style={styles.label}>Gateway 2 RSSI (Second Floor)</label>
                             <input
                                 placeholder="-85"
                                 value={liveRssi.gateway_2_rssi}
@@ -163,7 +168,7 @@ export default function Fingerprinting() {
                             <table style={styles.table}>
                                 <thead>
                                     <tr>
-                                        {['Spot', 'Location', 'GW1 RSSI', 'GW2 RSSI'].map(h => (
+                                        {['Spot', 'Location', 'GW1 RSSI', 'GW2 RSSI', ''].map(h => (
                                             <th key={h} style={styles.th}>{h}</th>
                                         ))}
                                     </tr>
@@ -175,6 +180,9 @@ export default function Fingerprinting() {
                                             <td style={styles.td}><span style={styles.badge}>{fp.location_name}</span></td>
                                             <td style={styles.td}><span style={styles.rssi}>{fp.gateway_1_rssi} dBm</span></td>
                                             <td style={styles.td}><span style={styles.rssi2}>{fp.gateway_2_rssi} dBm</span></td>
+                                            <td style={styles.td}>
+                                                <button onClick={() => deleteFingerprint(fp.id)} style={styles.deleteBtn}>✕</button>
+                                            </td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -204,6 +212,7 @@ const styles = {
     primaryBtn: { flex: 1, padding: '0.7rem', backgroundColor: '#00d4ff', color: '#0a0f1e', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 700, fontSize: '0.9rem' },
     secondaryBtn: { flex: 1, padding: '0.7rem', backgroundColor: 'rgba(124,58,237,0.15)', color: '#a78bfa', border: '1px solid rgba(124,58,237,0.3)', borderRadius: '8px', cursor: 'pointer', fontWeight: 700, fontSize: '0.9rem' },
     resetBtn: { padding: '0.4rem 0.8rem', backgroundColor: 'rgba(239,68,68,0.1)', color: '#ef4444', border: '1px solid rgba(239,68,68,0.3)', borderRadius: '6px', cursor: 'pointer', fontSize: '0.8rem' },
+    deleteBtn: { padding: '0.2rem 0.5rem', backgroundColor: 'rgba(239,68,68,0.1)', color: '#ef4444', border: '1px solid rgba(239,68,68,0.3)', borderRadius: '6px', cursor: 'pointer', fontSize: '0.75rem' },
     predictionCard: { marginTop: '1.5rem', backgroundColor: 'rgba(16,185,129,0.05)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: '12px', padding: '1rem' },
     predictionLabel: { color: '#64748b', fontSize: '0.8rem', marginBottom: '0.3rem' },
     predictionValue: { color: '#10b981', fontSize: '1.3rem', fontWeight: 700, fontFamily: 'Syne, sans-serif' },
