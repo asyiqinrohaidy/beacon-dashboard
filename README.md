@@ -1,4 +1,4 @@
-# Beacon Dashboard — React Frontend
+# BeaconCore — React Frontend
 
 A real-time employee location tracking dashboard built with React and Recharts.
 
