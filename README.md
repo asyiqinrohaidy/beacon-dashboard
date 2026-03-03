@@ -63,13 +63,13 @@ Laravel API: [beacon-tracker](https://github.com/asyiqinrohaidy/beacon-tracker)
 ![Charts](screenshots/Presencelogs_charts.png)
 
 ### Fingerprinting
-![Fingerprinting](screenshots/Fingerprinting.png)
+![Fingerprinting](screenshots/fingerprinting.png)
 
 ### Settings
-![Settings](screenshots/Settings.png)
+![Settings](screenshots/settings.png)
 
 ### Settings
-![Settings](screenshots/Settings2.png)
+![Settings](screenshots/settings2.png)
 
 ### Readings
-![Readings](screenshots/Readings.png)
+![Readings](screenshots/readings.png)
