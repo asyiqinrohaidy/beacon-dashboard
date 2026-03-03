@@ -27,7 +27,7 @@ export default function Login({ onLogin }) {
             <div style={styles.card}>
                 <div style={styles.logo}>
                     <span style={styles.logoIcon}>◈</span>
-                    <span style={styles.logoText}>BEACON<span style={styles.logoAccent}>TRACKER</span></span>
+                    <span style={styles.logoText}>BEACON<span style={styles.logoAccent}>CORE</span></span>
                 </div>
                 <h2 style={styles.title}>Welcome back</h2>
                 <p style={styles.subtitle}>Sign in to your account</p>
