@@ -41,3 +41,35 @@ npm run dev
 
 ## Backend
 Laravel API: [beacon-tracker](https://github.com/asyiqinrohaidy/beacon-tracker)
+
+## Screenshots
+
+### Login
+![Login](screenshots/Loginpage.png)
+
+### Live Map
+![Live Map](screenshots/Livemap.png)
+
+### Floor Plan
+![Floor Plan](screenshots/Floorplan.png)
+
+### Presence Logs
+![Presence Logs](screenshots/Presencelogs.png)
+
+### Presence Logs
+![Presence Logs](screenshots/Presencelogs2.png)
+
+### Presence Logs Charts
+![Charts](screenshots/Presencelogs_charts.png)
+
+### Fingerprinting
+![Fingerprinting](screenshots/Fingerprinting.png)
+
+### Settings
+![Settings](screenshots/Settings.png)
+
+### Settings
+![Settings](screenshots/Settings2.png)
+
+### Readings
+![Readings](screenshots/Readings.png)
