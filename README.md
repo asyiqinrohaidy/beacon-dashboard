@@ -44,32 +44,40 @@ Laravel API: [beacon-tracker](https://github.com/asyiqinrohaidy/beacon-tracker)
 
 ## Screenshots
 
-### Login
+### Login Page
+> Secure authentication page for system access.
 ![Login](screenshots/Loginpage.png)
 
-### Live Map
+### Live Map Page
+> Real-time employee location tracking with online/offline status indicators.
 ![Live Map](screenshots/Livemap.png)
 
-### Floor Plan
+### Floor Plan Page
+> Visual office map showing employee presence in each room in real time.
 ![Floor Plan](screenshots/Floorplan.png)
 
-### Presence Logs
+### Presence Logs Page
+> Full detection history with search and filter by employee, department and location.
 ![Presence Logs](screenshots/Presencelogs.png)
 
-### Presence Logs
+### Presence Logs Page
 ![Presence Logs](screenshots/Presencelogs2.png)
 
 ### Presence Logs Charts
+> Visual analytics showing detections by location and employee using bar and pie charts.
 ![Charts](screenshots/Presencelogs_charts.png)
 
-### Fingerprinting
+### Fingerprinting Page
+> Training mode for collecting RSSI fingerprints and live location prediction using Weighted KNN algorithm.
 ![Fingerprinting](screenshots/fingerprinting.png)
 
-### Settings
+### Settings 
+> Manage office locations and registered employees with beacon MAC addresses.
 ![Settings](screenshots/settings.png)
 
 ### Settings
 ![Settings](screenshots/settings2.png)
 
 ### Readings
+> Terminal showing real-time RSSI averaging from both gateways with predicted location.
 ![Readings](screenshots/readings.png)
